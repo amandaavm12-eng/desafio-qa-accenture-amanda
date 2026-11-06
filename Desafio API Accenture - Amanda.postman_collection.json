@@ -1,0 +1,218 @@
+{
+  "info": {
+    "_postman_id": "96630a3d-68fb-4f61-bb2e-06d63f66db2c",
+    "name": "Desafio API Accenture - Amanda",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60011952",
+    "_collection_link": "https://go.postman.co/collection/60011952-96630a3d-68fb-4f61-bb2e-06d63f66db2c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1 - Criar usuário",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userName\": \"amandavieira_qa2026\",\r\n  \"password\": \"Teste@Accenture2026!\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demoqa.com/Account/v1/User",
+          "protocol": "https",
+          "host": [
+            "demoqa",
+            "com"
+          ],
+          "path": [
+            "Account",
+            "v1",
+            "User"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2- Gerar token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userName\": \"amandavieira_qa2026\",\r\n  \"password\": \"Teste@Accenture2026!\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demoqa.com/Account/v1/GenerateToken",
+          "protocol": "https",
+          "host": [
+            "demoqa",
+            "com"
+          ],
+          "path": [
+            "Account",
+            "v1",
+            "GenerateToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3 - Confirmar autorizacao",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userName\": \"amandavieira_qa2026\",\r\n  \"password\": \"Teste@Accenture2026!\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demoqa.com/Account/v1/Authorized",
+          "protocol": "https",
+          "host": [
+            "demoqa",
+            "com"
+          ],
+          "path": [
+            "Account",
+            "v1",
+            "Authorized"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4 - Listar livros",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userName\": \"amandavieira_qa2026\",\r\n  \"password\": \"Teste@Accenture2026!\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demoqa.com/BookStore/v1/Books",
+          "protocol": "https",
+          "host": [
+            "demoqa",
+            "com"
+          ],
+          "path": [
+            "BookStore",
+            "v1",
+            "Books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5 - Alugar livros",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_0lle}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userId\": \"035a57b9-cce7-4f37-9b29-266038f9aefd\",\r\n  \"collectionOfIsbns\": [\r\n    {\r\n      \"isbn\": \"9781449325862\"\r\n    },\r\n    {\r\n      \"isbn\": \"9781449331818\"\r\n    }\r\n  ]\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demoqa.com/BookStore/v1/Books",
+          "protocol": "https",
+          "host": [
+            "demoqa",
+            "com"
+          ],
+          "path": [
+            "BookStore",
+            "v1",
+            "Books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "• 6 - Listar usuario",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_0lle}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://demoqa.com/Account/v1/User/035a57b9-cce7-4f37-9b29-266038f9aefd",
+          "protocol": "https",
+          "host": [
+            "demoqa",
+            "com"
+          ],
+          "path": [
+            "Account",
+            "v1",
+            "User",
+            "035a57b9-cce7-4f37-9b29-266038f9aefd"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "json_web_token_0lle",
+      "secret": true
+    }
+  ]
+}
